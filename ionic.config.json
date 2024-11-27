@@ -1,0 +1,7 @@
+{
+  "name": "rendu-car-SR",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
