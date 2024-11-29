@@ -61,16 +61,20 @@ export class RegisterPage implements OnInit {
       return;
     }
     this.passwordMismatchError = false;
-    
+
     this.authenticationService.signUpWithEmailAndPassword(this.registerForm.value as unknown as IUser)
       .then((userCreated: boolean | unknown) => {
         console.log(userCreated);
         if(userCreated) {
-          this.router.navigate(['cars']);
+          this.router.navigate(['login']);
         }
       }).catch((error) => {
       console.log(error);
     })
+  }
+
+  toLogin() {
+    this.router.navigate(['/login']);
   }
 
 }
