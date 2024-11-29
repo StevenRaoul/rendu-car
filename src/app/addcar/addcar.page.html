@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content>
-  <!-- Ajout du formGroup ici -->
   <form [formGroup]="registerForm" (ngSubmit)="addCar()">
     <ion-item>
       <ion-input
@@ -17,7 +16,6 @@
       </ion-input>
     </ion-item>
 
-    <!-- Erreur pour le champ "brand" -->
     @if (registerForm.get('brand')?.dirty) {
       @if (registerForm.get('brand')?.errors?.['required']) {
         <span class="span-error">Champ requis</span>
@@ -34,7 +32,6 @@
       </ion-input>
     </ion-item>
 
-    <!-- Erreur pour le champ "model" -->
     @if (registerForm.get('model')?.dirty) {
       @if (registerForm.get('model')?.errors?.['required']) {
         <span class="span-error">Champ requis</span>
@@ -51,7 +48,6 @@
       </ion-input>
     </ion-item>
 
-    <!-- Erreur pour le champ "plate" -->
     @if (registerForm.get('plate')?.dirty) {
       @if (registerForm.get('plate')?.errors?.['required']) {
         <span class="span-error">Champ requis</span>

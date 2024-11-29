@@ -7,10 +7,8 @@
 <ion-content>
   <ion-button color="success" (click)="toAddCar()">Ajouter une voiture</ion-button>
   
-  <!-- Conteneur pour la grille de cartes -->
   <ion-grid>
     <ion-row>
-      <!-- Carte de voiture -->
       <ion-col size="4" *ngFor="let car of cars" (click)="toCar(car.id)">
         <ion-card>
           <img [src]="car.frontpic" alt="Image de la voiture" />
