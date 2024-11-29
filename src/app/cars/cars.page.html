@@ -6,7 +6,6 @@
 
 <ion-content>
   <ion-button color="success" (click)="toAddCar()">Ajouter une voiture</ion-button>
-  
   <ion-grid>
     <ion-row>
       <ion-col size="4" *ngFor="let car of cars" (click)="toCar(car.id)">

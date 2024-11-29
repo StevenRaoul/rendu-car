@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class CarsPage implements OnInit {
 
-  cars: { brand: string, model: string, plate: string, frontpic: string, backpic: string, id: string }[] = []; // Tableau pour stocker les voitures (on ne garde que les modèles ici)
+  cars: { brand: string, model: string, plate: string, frontpic: string, backpic: string, id: string }[] = [];
 
   constructor(private router: Router) {}
 
