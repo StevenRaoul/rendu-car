@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nouvelle Voiture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Ajout du formGroup ici -->
+  <form [formGroup]="registerForm" (ngSubmit)="addCar()">
+    <ion-item>
+      <ion-input
+        label="Marque :"
+        labelPlacement="stacked"
+        placeholder=""
+        formControlName="brand"
+      >
+      </ion-input>
+    </ion-item>
+
+    <!-- Erreur pour le champ "brand" -->
+    @if (registerForm.get('brand')?.dirty) {
+      @if (registerForm.get('brand')?.errors?.['required']) {
+        <span class="span-error">Champ requis</span>
+      }
+    }
+
+    <ion-item>
+      <ion-input
+        label="Modèle :"
+        labelPlacement="stacked"
+        placeholder=""
+        formControlName="model"
+      >
+      </ion-input>
+    </ion-item>
+
+    <!-- Erreur pour le champ "model" -->
+    @if (registerForm.get('model')?.dirty) {
+      @if (registerForm.get('model')?.errors?.['required']) {
+        <span class="span-error">Champ requis</span>
+      }
+    }
+
+    <ion-item>
+      <ion-input
+        label="Plaque d'immatriculation :"
+        labelPlacement="stacked"
+        placeholder=""
+        formControlName="plate"
+      >
+      </ion-input>
+    </ion-item>
+
+    <!-- Erreur pour le champ "plate" -->
+    @if (registerForm.get('plate')?.dirty) {
+      @if (registerForm.get('plate')?.errors?.['required']) {
+        <span class="span-error">Champ requis</span>
+      }
+    }
+
+    <ion-item>
+      <ion-label position="stacked">Photo (Avant) :</ion-label>
+      <ion-input
+        type="file"
+        (change)="onFileChange($event, 'front')"
+        accept="image/*"
+        formControlName="frontpic"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Photo (Arrière) :</ion-label>
+      <ion-input
+        type="file"
+        (change)="onFileChange($event, 'back')"
+        accept="image/*"
+        formControlName="backpic"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-button color="success" type="submit">Ajouter la voiture</ion-button>
+  </form>
+
+  <ion-button color="success" (click)="toCars()">Retour</ion-button>
+</ion-content>

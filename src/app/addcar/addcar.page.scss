@@ -1,0 +1,51 @@
+/* Style général du formulaire */
+.form-content {
+  padding: 20px;
+}
+
+/* Style des items du formulaire */
+.form-item {
+  margin-bottom: 15px;
+}
+
+/* Texte d'erreur */
+ion-text {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+
+/* Formulaire en vue mobile */
+.car-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Champs de saisie avec bordure douce */
+ion-input {
+  --border-radius: 8px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: #333;
+  font-size: 1rem;  
+  height: 50px;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+
+ion-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pour rendre les boutons clairs et les champs d'entrée plus visibles */
+ion-item {
+  --highlight-color-focused: #4CAF50; /* Couleur de survol verte */
+}
+
+/* Style des champs de fichier */
+ion-input[type="file"] {
+  padding-left: 0;
+  padding-right: 0;
+}

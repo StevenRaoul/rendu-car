@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Liste des Voitures</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="success" (click)="toAddCar()">Ajouter une voiture</ion-button>
+  
+  <!-- Conteneur pour la grille de cartes -->
+  <ion-grid>
+    <ion-row>
+      <!-- Carte de voiture -->
+      <ion-col size="4" *ngFor="let car of cars" (click)="toCar(car.id)">
+        <ion-card>
+          <img [src]="car.frontpic" alt="Image de la voiture" />
+          <ion-card-header>
+            <ion-card-title>{{ car.brand }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Modèle : {{ car.model }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

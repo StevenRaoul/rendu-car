@@ -1,0 +1,41 @@
+/* car.page.scss */
+
+ion-card {
+  margin: 10px;
+}
+
+ion-card-header {
+  text-align: center;
+}
+
+ion-card-title {
+  font-size: 2rem; /* Taille du titre */
+  font-weight: bold; /* Gras */
+  text-decoration: underline; /* Souligné */
+}
+
+ion-card-content {
+  font-size: 1.2rem; /* Taille du sous-titre */
+  font-style: italic; /* Italique */
+  text-align: center;
+}
+
+img {
+  width: 20vw; /* 20% de la largeur de la fenêtre */
+  height: 20vw; /* Carré */
+  object-fit: cover; /* Couvrir l'espace sans déformer l'image */
+  margin: 0 10px; /* Marge sur les côtés */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-card-content {
+  margin-top: 10px;
+}
+
+ion-button {
+  text-align: center;
+  display: flex;
+  margin: 3vh 35vw 2vh 35vw;
+}

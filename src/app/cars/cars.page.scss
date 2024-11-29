@@ -1,0 +1,50 @@
+/* cars.page.scss */
+
+/* Conteneur pour les cartes en grille */
+ion-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 10px; /* Espacement entre les cartes */
+  padding: 10px;
+}
+
+/* Style de chaque carte */
+ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Hauteur fixe de la carte */
+  width: 100%; /* Remplir toute la largeur de la colonne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour la carte */
+  border-radius: 10px; /* Bords arrondis */
+  overflow: hidden; /* Pour que les images ne débordent pas */
+}
+
+/* Style des images dans les cartes */
+ion-card img {
+  width: 100%; /* Largeur complète de la carte */
+  height: 150px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Maintien du ratio d'aspect sans déformer l'image */
+  margin-bottom: 10px; /* Marge en bas de l'image */
+}
+
+/* Style du contenu texte de la carte */
+ion-card-header {
+  text-align: center;
+}
+
+ion-card-title {
+  font-size: 1.2rem; /* Taille du titre */
+  font-weight: bold;
+}
+
+ion-card-content {
+  font-size: 1rem; /* Taille du texte de contenu */
+  text-align: center;
+}
+
+ion-button {
+  text-align: center;
+  display: flex;
+  margin: 3vh 35vw 2vh 35vw;
+}
